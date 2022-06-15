@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h1 align="center">Login Agendas</h1>
+    <form action="submit" method="POST">{% csrf_token %}
+        <div align="center">
+            <label>Usuário:</label>
+            <input type="text" name="username">
+            <label>Senha:</label>
+            <input type="password" name="password">
+            <button type="submit">Entrar</button>
+        </div>
+    </form> {% csrf_token %}
+
+    {% for message in messages %}
+        <div align="center">
+            <strong>Erro! </strong>{{ message }}
+        </div>
+    {% endfor %}
+    <h4 align="center">Desenvolvido por Gabriel Oliveira.</h4>
+</body>
+</html>
